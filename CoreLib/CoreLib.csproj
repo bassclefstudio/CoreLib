@@ -6,6 +6,10 @@
     <Nullable>enable</Nullable>
     <AssemblyName>BassClefStudio.CoreLib</AssemblyName>
     <RootNamespace>BassClefStudio.CoreLib</RootNamespace>
+    <Authors>BassClefStudio</Authors>
+    <Description>Provides .NET helper methods and basic data structures.</Description>
+    <PackageProjectUrl>https://github.com/bassclefstudio/CoreLib</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/bassclefstudio/CoreLib.git</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

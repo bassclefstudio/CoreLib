@@ -22,7 +22,5 @@ namespace BassClefStudio.CoreLib.Structures.Graphs
 
         public static IEnumerable<Edge<T>> Transitive<T>(this IEnumerable<Edge<T>> graph, Func<Edge<T>, Edge<T>, Edge<T>> newEdge)
             => graph.SelectMany(e => graph.From(e.Start).Select(t => newEdge(e, t)));
-
-        public static IEnumerable<Edge<T>> Basic
     }
 }
