@@ -12,8 +12,4 @@
     <RepositoryUrl>https://github.com/bassclefstudio/CoreLib.git</RepositoryUrl>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 </Project>
