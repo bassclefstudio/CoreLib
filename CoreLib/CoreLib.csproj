@@ -7,6 +7,7 @@
     <AssemblyName>BassClefStudio.CoreLib</AssemblyName>
     <RootNamespace>BassClefStudio.CoreLib</RootNamespace>
 
+    <PackageId>CoreLib</PackageId>
     <Authors>BassClefStudio</Authors>
     <Description>Provides .NET helper methods and basic data structures.</Description>
     <PackageProjectUrl>https://github.com/bassclefstudio/CoreLib</PackageProjectUrl>
