@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
     <AssemblyName>BassClefStudio.CoreLib</AssemblyName>
     <RootNamespace>BassClefStudio.CoreLib</RootNamespace>
+
     <Authors>BassClefStudio</Authors>
     <Description>Provides .NET helper methods and basic data structures.</Description>
     <PackageProjectUrl>https://github.com/bassclefstudio/CoreLib</PackageProjectUrl>
@@ -15,10 +16,4 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Services\**" />
-    <EmbeddedResource Remove="Services\**" />
-    <None Remove="Services\**" />
-  </ItemGroup>
 </Project>
