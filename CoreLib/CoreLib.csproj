@@ -21,5 +21,4 @@
     <EmbeddedResource Remove="Services\**" />
     <None Remove="Services\**" />
   </ItemGroup>
-
 </Project>

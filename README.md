@@ -1,1 +1,2 @@
 # CoreLib
+CoreLib is the .NET 6 evolution of [.NET-Libraries](https://github.com/bassclefstudio/.NET-Libraries), with a more streamlined design and straightforward implementation. It provides basic data structures and helper methods for use in all kinds of .NET projects - basically a 'toolbox' of core functionality that can supplement the existing standard libraries.
