@@ -10,10 +10,16 @@
     <Description>Provides .NET helper methods and basic data structures.</Description>
     <PackageProjectUrl>https://github.com/bassclefstudio/CoreLib</PackageProjectUrl>
     <RepositoryUrl>https://github.com/bassclefstudio/CoreLib.git</RepositoryUrl>
+    <PackageTags>core;graph;observable;datetime;color</PackageTags>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Services\**" />
   </ItemGroup>
 
 </Project>
