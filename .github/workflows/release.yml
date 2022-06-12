@@ -28,4 +28,4 @@ jobs:
     - name: Pack
       run: dotnet pack --configuration Release --no-build
     - name: Push
-      run: dotnet nuget push "**.nupkg" --source "GPR" --skip-duplicate --no-symbols true -k ${{ secrets.GITHUB_TOKEN }}
+      run: dotnet nuget push "**.nupkg" --source "GPR" --skip-duplicate --no-symbols -k ${{ secrets.GITHUB_TOKEN }}
