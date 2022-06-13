@@ -1,4 +1,4 @@
-﻿namespace BassClefStudio.CoreLib.Helpers
+﻿namespace BassClefStudio.Core.Helpers
 {
     /// <summary>
     /// A class containing extension methods for <see cref="IList{T}"/> and <see cref="IEnumerable{T}"/>.

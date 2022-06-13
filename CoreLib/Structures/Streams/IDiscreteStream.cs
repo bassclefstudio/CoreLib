@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BassClefStudio.CoreLib.Structures.Streams
+namespace BassClefStudio.Core.Structures.Streams
 {
     /// <summary>
     /// Represents a streaming interface that is used to stream discrete objects or events (as opposed to other <see cref="Stream"/>s which are used for streaming continuous data from storage or memory).

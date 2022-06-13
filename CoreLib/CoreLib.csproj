@@ -4,8 +4,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <AssemblyName>BassClefStudio.CoreLib</AssemblyName>
-    <RootNamespace>BassClefStudio.CoreLib</RootNamespace>
+    <AssemblyName>BassClefStudio.Core</AssemblyName>
+    <RootNamespace>BassClefStudio.Core</RootNamespace>
 
     <PackageId>CoreLib</PackageId>
     <Authors>BassClefStudio</Authors>

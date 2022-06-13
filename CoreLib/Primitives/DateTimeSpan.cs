@@ -1,4 +1,4 @@
-﻿namespace BassClefStudio.CoreLib.Primitives
+﻿namespace BassClefStudio.Core.Primitives
 {
     /// <summary>
     /// Represents a contiguous block of time between two <see cref="DateTimeOffset"/>s.

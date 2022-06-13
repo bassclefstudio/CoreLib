@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BassClefStudio.CoreLib.Structures.Graphs
+namespace BassClefStudio.Core.Structures.Graphs
 {
     /// <summary>
     /// Provides helper methods and operations that can be executed on a desired <see cref="Graph"/>.
