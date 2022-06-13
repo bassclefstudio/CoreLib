@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace BassClefStudio.CoreLib.Helpers
+namespace BassClefStudio.Core.Helpers
 {
     /// <summary>
     /// Represents a wrapper around a <see cref="Task"/> that allows it to start without awaiting and callback if an <see cref="Exception"/> is thrown.

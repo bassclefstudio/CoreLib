@@ -1,4 +1,4 @@
-﻿namespace BassClefStudio.CoreLib.Helpers
+﻿namespace BassClefStudio.Core.Helpers
 {
     /// <summary>
     /// Represents an object that can be identified by a <typeparamref name="T"/> key.

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace BassClefStudio.CoreLib.Helpers
+namespace BassClefStudio.Core.Helpers
 {
     /// <summary>
     /// Represents an object that can register PropertyChanged events when properties within it are set.

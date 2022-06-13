@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BassClefStudio.CoreLib.Structures.Graphs
+namespace BassClefStudio.Core.Structures.Graphs
 {
     /// <summary>
     /// Represents an abstract connection between two <typeparamref name="T"/> nodes.

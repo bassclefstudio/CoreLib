@@ -1,4 +1,4 @@
-﻿namespace BassClefStudio.CoreLib.Primitives
+﻿namespace BassClefStudio.Core.Primitives
 {
     /// <summary>
     /// Represents a <see cref="DateTime"/> with knowledge of the time zone it belongs to.
