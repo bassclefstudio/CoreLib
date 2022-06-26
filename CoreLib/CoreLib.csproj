@@ -10,6 +10,7 @@
 
     <PackageId>CoreLib</PackageId>
     <Authors>BassClefStudio</Authors>
+	<Version>1.1.0</Version>
     <Description>Provides .NET helper methods and basic data structures.</Description>
     <PackageProjectUrl>https://github.com/bassclefstudio/CoreLib</PackageProjectUrl>
     <RepositoryUrl>https://github.com/bassclefstudio/CoreLib.git</RepositoryUrl>
