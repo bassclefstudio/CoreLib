@@ -105,6 +105,8 @@ public readonly record struct DateTimeSet(params DateTimeSpan[] Spans) : IEquata
                 spans.Add(new DateTimeSpan(
                     (a.StartDate < b.StartDate) ? b.StartDate : a.StartDate,
                     (a.EndDate > b.EndDate) ? b.EndDate : a.EndDate));
+                i++;
+                j++;
             }
         }
         return new DateTimeSet(spans.ToArray());
