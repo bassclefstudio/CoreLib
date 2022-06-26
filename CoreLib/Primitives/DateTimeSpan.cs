@@ -10,6 +10,11 @@ namespace BassClefStudio.Core.Primitives
     public readonly record struct DateTimeSpan(DateTimeOffset StartDate, DateTimeOffset EndDate) : IComparable<DateTimeSpan>
     {
         /// <summary>
+        /// A <see cref="DateTimeSpan"/> that spans every point in time.
+        /// </summary>
+        public static readonly DateTimeSpan All = new DateTimeSpan(DateTimeOffset.MinValue, DateTimeOffset.MaxValue);
+
+        /// <summary>
         /// Creates a new <see cref="DateTimeSpan"/> between two dates.
         /// </summary>
         /// <param name="start">The <see cref="DateTime"/> where this <see cref="DateTimeSpan"/> starts.</param>

@@ -18,6 +18,11 @@ public readonly record struct DateTimeSet(params DateTimeSpan[] Spans) : IEquata
     public static readonly DateTimeSet Empty = new DateTimeSet();
 
     /// <summary>
+    /// Represents an empty <see cref="DateTimeSet"/> which includes all points in time.
+    /// </summary>
+    public static readonly DateTimeSet All = new DateTimeSet(DateTimeSpan.All);
+
+    /// <summary>
     /// Creates a <see cref="DateTimeSet"/> from a collection of <see cref="DateTimeSpan"/>s.
     /// </summary>
     /// <param name="spans">A collection of unordered <see cref="DateTimeSpan"/> spans which define the periods of time included in this set.</param>
@@ -57,11 +62,17 @@ public readonly record struct DateTimeSet(params DateTimeSpan[] Spans) : IEquata
         foreach (var p in this.Points())
         {
             if (current == null) current = p;
-            else
+            else if (current.Value < p)
             {
                 spans.Add(new DateTimeSpan(current.Value, p)); current = null;
             }
         }
+
+        if (current.Value < DateTimeOffset.MaxValue)
+        {
+            spans.Add(new DateTimeSpan(current.Value, DateTimeOffset.MaxValue));
+        }
+
         return new DateTimeSet(spans.ToArray());
     }
 
