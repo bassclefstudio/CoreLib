@@ -10,12 +10,12 @@ namespace BassClefStudio.Core.Primitives;
 /// A set of <see cref="DateTimeOffset"/>s, represented by a collection of <see cref="DateTimeSpan"/>s from which the set is constructed.
 /// </summary>
 /// <param name="Spans">The collection of normalized (see <see cref="DateTimeSpanExtensions.Normalize(IEnumerable{DateTimeSpan})"/>) <see cref="DateTimeSpan"/>s which make up every interval of time which is included in this <see cref="DateTimeSet"/>.</param>
-public readonly record struct DateTimeSet(params DateTimeSpan[] Spans) : IEquatable<DateTimeSet>
+public record DateTimeSet(params DateTimeSpan[] Spans) : IEquatable<DateTimeSet>
 {
     /// <summary>
     /// Represents an empty <see cref="DateTimeSet"/> which includes no points in time.
     /// </summary>
-    public static readonly DateTimeSet Empty = new DateTimeSet(Array.Empty<DateTimeSpan>());
+    public static readonly DateTimeSet Empty = new DateTimeSet();
 
     /// <summary>
     /// Represents an empty <see cref="DateTimeSet"/> which includes all points in time.

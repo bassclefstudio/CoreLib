@@ -116,19 +116,25 @@ namespace BassClefStudio.Core.Primitives
             DateTimeSpan? current = null;
             foreach(var s in spans.OrderBy(k => k.StartDate))
             {
-                if (current != null && current.Value.EndDate >= s.StartDate)
-                {
-                    current = current.Value with
-                    {
-                        EndDate = s.EndDate
-                    };
-                }
+                if (current == null) current = s;
                 else
                 {
-                    yield return s;
-                    current = s;
+                    if (current.Value.EndDate >= s.StartDate)
+                    {
+                        current = current.Value with
+                        {
+                            EndDate = s.EndDate
+                        };
+                    }
+                    else
+                    {
+                        yield return current.Value;
+                        current = s;
+                    }
                 }
             }
+
+            if (current != null) yield return current.Value;
         }
 
         /// <summary>
