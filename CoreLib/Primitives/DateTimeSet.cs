@@ -15,7 +15,7 @@ public readonly record struct DateTimeSet(params DateTimeSpan[] Spans) : IEquata
     /// <summary>
     /// Represents an empty <see cref="DateTimeSet"/> which includes no points in time.
     /// </summary>
-    public static readonly DateTimeSet Empty = new DateTimeSet();
+    public static readonly DateTimeSet Empty = new DateTimeSet(Array.Empty<DateTimeSpan>());
 
     /// <summary>
     /// Represents an empty <see cref="DateTimeSet"/> which includes all points in time.
@@ -82,7 +82,7 @@ public readonly record struct DateTimeSet(params DateTimeSpan[] Spans) : IEquata
     /// <param name="other">The second <see cref="DateTimeSet"/> to combine.</param>
     /// <returns>The resulting single <see cref="DateTimeSet"/> which contains all points in time contained within the current set and/or <paramref name="other"/>.</returns>
     public DateTimeSet Union(DateTimeSet other)
-        => new DateTimeSet(this.Spans.Concat(other.Spans).Normalize().ToArray());
+        => CreateSet(this.Spans.Concat(other.Spans));
 
     /// <summary>
     /// Finds the intersection of this set with another set.
