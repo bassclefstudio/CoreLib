@@ -113,28 +113,30 @@ namespace BassClefStudio.Core.Primitives
         /// <returns>A collection of <see cref="DateTimeSpan"/>s equivalent to <paramref name="spans"/>, but ordered by <see cref="DateTimeSpan.StartDate"/> and without any duplicate or adjacent items. The length of the result must be equal to or less than the length of <paramref name="spans"/>.</returns>
         public static IEnumerable<DateTimeSpan> Normalize(this IEnumerable<DateTimeSpan> spans)
         {
-            DateTimeSpan? current = null;
-            foreach(var s in spans.OrderBy(k => k.StartDate))
+            DateTimeSpan? previous = null;
+            foreach(var span in spans.Distinct()
+                .Where(s => s.StartDate < s.EndDate)
+                .OrderBy(s => s))
             {
-                if (current == null) current = s;
-                else
+                if (previous == null) previous = span;
+                else if (previous.Value.EndDate >= span.StartDate)
                 {
-                    if (current.Value.EndDate >= s.StartDate)
+                    if (span.EndDate > previous.Value.EndDate)
                     {
-                        current = current.Value with
+                        previous = previous.Value with
                         {
-                            EndDate = s.EndDate
+                            EndDate = span.EndDate
                         };
                     }
-                    else
-                    {
-                        yield return current.Value;
-                        current = s;
-                    }
+                }
+                else
+                {
+                    yield return previous.Value;
+                    previous = span;
                 }
             }
 
-            if (current != null) yield return current.Value;
+            if (previous != null) yield return previous.Value;
         }
 
         /// <summary>
